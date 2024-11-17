@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST="{\"index.js -> src/components/eventos\":{\"id\":\"index.js -> src/components/eventos\",\"files\":[\"static/chunks/src_components_eventos_js.js\"]},\"index.js -> src/components/postsPost\":{\"id\":\"index.js -> src/components/postsPost\",\"files\":[\"static/chunks/src_components_postsPost_js.js\"]}}"
