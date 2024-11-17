@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useCallback, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { styled } from "@mui/material/styles";
@@ -39,17 +40,20 @@ export const Layout = withAuthGuard((props) => {
     () => {
       handlePathnameChange();
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     [pathname]
   );
 
   return (
     <>
+      <Head>
+        <link rel="manifest" href="/manifest.json" />
+        <title>EventWeb</title>
+        <meta name="theme-color" content="#000000" />
+        <meta name="description" content="EventWeb Progressive Web App" />
+      </Head>
       <CatalogsProvider>
         <TopNav onNavOpen={() => setOpenNav(true)} />
-        <SideNav
-          onClose={() => setOpenNav(false)}
-          open={openNav} />
+        <SideNav onClose={() => setOpenNav(false)} open={openNav} />
         <LayoutRoot>
           <LayoutContainer>{children}</LayoutContainer>
         </LayoutRoot>
